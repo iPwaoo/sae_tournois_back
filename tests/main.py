@@ -1,5 +1,7 @@
 from services.connexion import DatabaseService as Mongo
 from services.affichage import main_menu
+import services.algorithmes.insertion as insertion
+import services.algorithmes.recherche as recherche
 
 
 def test():
@@ -22,5 +24,8 @@ def test():
 
 
 if __name__ == '__main__':
-    db = Mongo.DatabaseService()
-    test()
+    #test()
+    #result = insertion.insertion_joueur("Bouetel","Quentin","Homme", [25, 'Intermédiaire'])
+    #print(result)
+    result = recherche.recherche_joueur("Quentin")
+    print(result)
