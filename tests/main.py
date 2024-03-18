@@ -1,7 +1,5 @@
-from services.connexion import DatabaseService as Mongo
 from services.affichage import main_menu
-import services.algorithmes.insertion as insertion
-import services.algorithmes.recherche as recherche
+import services.algorithmes.joueur.joueur_recherche as recherche
 
 
 def test():
