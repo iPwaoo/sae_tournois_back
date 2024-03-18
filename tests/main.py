@@ -1,4 +1,5 @@
 from services.affichage import main_menu
+import services.algorithmes.joueur.joueur_insertion as insertion
 import services.algorithmes.joueur.joueur_recherche as recherche
 
 
@@ -23,7 +24,10 @@ def test():
 
 if __name__ == '__main__':
     #test()
-    #result = insertion.insertion_joueur("Bouetel","Quentin","Homme", [25, 'Intermédiaire'])
+    #result = insertion.insertion_joueur("BADI", "AOFO", "Femme", [25, 'Experte'])
     #print(result)
     result = recherche.recherche_joueur("Quentin")
     print(result)
+
+#65f850608f224eb1d47cd5f1
+#65f863b839df312113157054
