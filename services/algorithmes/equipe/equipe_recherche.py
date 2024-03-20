@@ -13,9 +13,10 @@ def recherche_equipe_par_equipier(nom_joueur: str):
     projection = {"_id": 0}
     result = list(collections.find(filtre, projection))
     db.seDeconnecter()
+    return result
 
 
-def recherche_equipe_par_nombre(nom_equipe: str):
+def recherche_equipe_par_nom(nom_equipe: str):
     db = DatabaseService()
     collections = db.get_collection("equipe")
     filtre = {
@@ -24,4 +25,14 @@ def recherche_equipe_par_nombre(nom_equipe: str):
     projection = {"_id": 0}
     result = list(collections.find(filtre, projection))
     db.seDeconnecter()
+    return result
 
+
+def toutes_les_equipes():
+    db = DatabaseService()
+    collections = db.get_collection("equipe")
+    filtre = {}
+    projection = {"_id": 0}
+    result = list(collections.find(filtre, projection))
+    db.seDeconnecter()
+    return result

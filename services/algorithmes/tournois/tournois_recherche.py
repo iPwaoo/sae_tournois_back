@@ -17,3 +17,13 @@ def rechercher_tournois_par_lieu(nom_lieu: str):
     resultat = list(collection.find(filtre))
     db.seDeconnecter()
     return resultat
+
+
+def tout_les_tournois():
+    db = DatabaseService()
+    collection = db.get_collection("tournois")
+    filtre = {}
+    projection = {"_id": 0}
+    resultat = list(collection.find(filtre, projection))
+    db.seDeconnecter()
+    return resultat

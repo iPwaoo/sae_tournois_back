@@ -12,21 +12,17 @@ def get_all():
     return jsonify(result)
 
 
-@tournois_bp.route('/<string:tournois_name>', methods=['GET'])
-def get_by_name(tournois_name):
-    result = tournois_recherche.recherche_tournois(tournois_name)
+@tournois_bp.route('/<string:place_name>', methods=['GET'])
+def get_by_place_name(place_name):
+    result = tournois_recherche.rechercher_tournois_par_lieu(place_name)
     return jsonify(result)
 
 
 @tournois_bp.route('/', methods=['POST'])
-def add_tournois():
-    nom = request.json.get('nom')
-    prenom = request.json.get('prenom')
-    sexe = request.json.get('sexe')
-    categorie = request.json.get('categorie')
-    print(categorie)
-    tournois_insertion.insertion_tournois(nom, prenom, sexe, categorie)
-    return f"Tu as ajouté dans le fichier : {request.json}"
+def add_tournoi():
+    result = request.json
+    tournois_insertion.insertion_tournoi(result)
+    return f"Tu as ajouté un tournoi : {request.json}"
 
 
 @tournois_bp.route('/', methods=['PUT'])
