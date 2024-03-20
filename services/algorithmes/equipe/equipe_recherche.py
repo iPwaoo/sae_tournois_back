@@ -11,9 +11,7 @@ def recherche_equipe_par_equipier(nom_joueur: str):
         ]
     }
     projection = {"_id": 0}
-    result = collections.find(filtre, projection)
-    for document in result:
-        print(document)
+    result = list(collections.find(filtre, projection))
     db.seDeconnecter()
 
 
@@ -24,8 +22,6 @@ def recherche_equipe_par_nombre(nom_equipe: str):
         {"nom": nom_equipe}
     }
     projection = {"_id": 0}
-    result = collections.find(filtre, projection)
-    for document in result:
-        print(document)
+    result = list(collections.find(filtre, projection))
     db.seDeconnecter()
 

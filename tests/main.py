@@ -27,7 +27,6 @@ if __name__ == '__main__':
     #result = insertion.insertion_joueur("BADI", "AOFO", "Femme", [25, 'Experte'])
     #print(result)
     result = recherche.recherche_joueur("Quentin")
-    print(result)
 
 #65f850608f224eb1d47cd5f1
 #65f863b839df312113157054
