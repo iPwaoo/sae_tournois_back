@@ -20,12 +20,13 @@ def get_by_name(joueurs_name):
 
 @joueur_bp.route('/', methods=['POST'])
 def add_joueur():
+    print(request.json)
     nom = request.json.get('nom')
     prenom = request.json.get('prenom')
     sexe = request.json.get('sexe')
     categorie = request.json.get('categorie')
     print(categorie)
-    joueur_insertion.insertion_joueur(nom, prenom, sexe, categorie)
+    #joueur_insertion.insertion_joueur(nom, prenom, sexe, categorie)
     return f"Tu as ajouté dans le fichier : {request.json}"
 
 
