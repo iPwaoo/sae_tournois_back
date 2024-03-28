@@ -11,4 +11,3 @@ def calcul_max_participants(temps_disponible: str, nombre_de_parties: int):
     # Calculer le nombre maximal de participants (chaque match implique deux participants)
     max_participants = max_matches * 2
     return max_participants
-
